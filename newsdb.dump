@@ -1,0 +1,57 @@
+-- MySQL dump 10.16  Distrib 10.1.29-MariaDB, for Linux (x86_64)
+--
+-- Host: localhost    Database: newsdb
+-- ------------------------------------------------------
+-- Server version	10.1.29-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `news`
+--
+
+DROP TABLE IF EXISTS `news`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `permalink` varchar(130) COLLATE utf8_unicode_ci NOT NULL,
+  `teaser` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `article` varchar(4000) COLLATE utf8_unicode_ci NOT NULL,
+  `main_image` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `author` enum('Umar','Usman','Ali','Khalid') COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `permalink_key` (`permalink`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `news`
+--
+
+LOCK TABLES `news` WRITE;
+/*!40000 ALTER TABLE `news` DISABLE KEYS */;
+INSERT INTO `news` VALUES (1,'Sandi Minta Rumah DP Rp 0 Harus Bisa Dipesan Akhir Agustus','sandi-minta-rumah-dp-rp-0-harus-bisa-dipesan-akhir-agustus','<p>Sebelum melepas jabatan Wagub DKI Jakarta, Sandiaga Uno sempat berpesan ke pihak Pemprov DKI akhir Agustus ini rumah DP Rp 0 sudah bisa dipesan masyarakat.</p>','<p><strong>Jakarta</strong> - Pemerintah Provinsi (Pemprov) DKI Jakarta punya<a href=\"https://www.detik.com/tag/rumah-dp-rp-0/?_ga=2.112161420.983615625.1533471558-1700251616.1525668697\" target=\"_blank\"> proyek rumah DP Rp 0 </a>di <a href=\"https://www.detik.com/tag/rumah-dp-rp-0/?_ga=2.112161420.983615625.1533471558-1700251616.1525668697\" target=\"_blank\">Pondok Kelapa, Jakarta Timur</a>. Selama ini proyek hunian berbentuk <a href=\"https://www.detik.com/tag/rumah-dp-rp-0/?_ga=2.112161420.983615625.1533471558-1700251616.1525668697\" target=\"_blank\">rumah susun (rusun)</a> tersebut gencar dijelaskan ke publik oleh <a href=\"https://www.detik.com/tag/rumah-dp-rp-0/?_ga=2.112161420.983615625.1533471558-1700251616.1525668697\" target=\"_blank\">Sandiaga Uno</a>.</p><p>Cuma saat ini Sandiaga telah melepas jabatan wakil gubernur (wagub) DKI Jakarta yang diembannya selama hampir setahun, karena maju sebagai calon wakil presiden Prabowo Subianto di pilpres 2019. Menurut Sandiaga proyek rumah DP Rp 0 tetap dijalankan Pemprov DKI Jakarta</p><p><img src=\"/uploads/guest/d1b1ba1bb6-fish-custom.png\"></p><p>Bahkan, sebelum mundur dari posisi Wagub DKI, Sandi sempat berpesan pada pihak Pemprov DKI agar rumah DP Rp 0 bisa ditawarkan ke masyarakat akhir bulan ini.</p>\"Waktu saya tinggal, saya mengucapkan satu instruksi. Saya menginstruksikan bahwa akhir bulan (ini) harus bisa sudah dipesan,\" ujar pria yang beken disapa Sandi itu saat hadir dalam acara launching anak-anak Warakas Maju dan Bahagia, di Warakas, Tanjung Priok, Jakarta Utara, Sabtu (11/8/2018).<p><br>Sebelumnya pada Kamis (26/7/2018) saat masih mengemban jabatan Wagub DKI, Sandi sempat mengatakan rumah DP Rp 0 akan ditawarkan ke masyarakat paling lambat akhir Agustus tahun ini. Sandi menyampaikan hal itu karena menurutnya urusan skema pembiayaan akan rampung di awal Agustus.<br></p><p>Selanjutnya masyarakat bisa memesan unit rusun yang diberi nama Klapa Village itu akhir Agustus.</p><p>\"Skema pembiayaannya itu beres, ya (di awal Agustus). Kita ingin bisa ditawarkan kepada publik segera, paling tidak, mungkin pertengahan atau akhir Agustus,\" kata Sandiaga di Balai Kota DKI, Jl Medan Merdeka Selatan, Jakarta Pusat, Kamis (26/7/2018).</p><p>Sandi berharap target akhir Agustus itu bisa terlaksana, namun dia enggan menjelaskan lebih jauh soal kepastian rumah DP Rp 0 bisa dipesan mulai Akhir Agustus.<br></p><p>Alasannya karena sekarang dia sudah melepas jabatan Wagub DKI Jakarta.</p><p>\"Nanti tanyakan lagi ke DKI ya,\" tutup Sandi. <strong>(hns/hns)</strong></p>','/var/www/web/assets/sandi-minta-rumah-dp-rp-0-harus-bisa-dipesan-akhir-agustus5b6eb128dc6c7.png','Umar');
+/*!40000 ALTER TABLE `news` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-08-11 10:14:47
